@@ -1,0 +1,334 @@
+:root{
+    --negro: #000000;
+    --primario: #ffffff;
+    --grisClaro: #b7b7b7;
+    --naranja: #e4830c;
+    --rojo: #f30808;
+    --amarillo: #f1de0c;
+    --fuentePrincipal: 'Rubik', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para box model */
+}
+
+*, *:before, *:after { /*Selector universal (*) */
+    box-sizing: inherit;
+}
+
+/* 1 rem = 10 px px=pixel */
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 16px;/*tamaÃ±o de texto definido de 16 pixeles*/ 
+}
+/*Sombra*/
+.sombra{
+    /*-webkit-box-shadow: 4px 12px 71px -17px rgba(201,201,201,1);*/
+    /*-moz-box-shadow: 4px 12px 71px -17px rgba(201,201,201,1);*/
+    box-shadow: 4px 12px 71px -17px rgba(201,201,201,1);
+    background-color: var(--primario);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+/*Titulos*/
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+/*Contenedor*/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+/*Header*/
+.header{
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--primario) 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*Navegación*/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.boton{
+    background-color: var(--naranja);
+    color: var(--primario);
+    padding: 1rem 3rem;/*Aplicamos 10px arriba 30px a la derecha 10px abajo y 30px a la izquierda y como los valores se repiten no es necesario definir las 4 posiciones*/
+    margin-top: 1rem;/*Agregamos 10px de separacion*/
+    font-size: 2rem;/*Aplicamos un tamaÃ±o de 20px al texto*/
+    text-decoration: none;/*Quitamos el subrayado del enlace*/
+    text-transform: uppercase;/*Ponemos el texto en mayusculas*/
+    font-weight: bold;/*Colocamos el texto en negritas*/
+    border-radius: 0.5rem;/*Borde de 5px, lo usamos para redondear las esquinas del botÃ³n*/
+    width: 90%;/*Ancho de 90% del boton*/
+    text-align: center;/*Alineamos el texto de boton al centro*/
+    border: none; /*Eliminamos el borde que viene por default en el boton del formulario*/
+}
+
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
+
+.boton:hover{
+    cursor: pointer; /*Todos los botones de nuestra pagina cambiaran el cursor a una manita al colocarlo encima de ellos*/
+}
+
+.nav-bg{
+    background-color: var(--naranja);
+}
+
+.dgn-style{
+    margin-top: 4rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .dgn-style{
+        width: auto;
+    }
+}
+
+.alinear-derecha{
+    display: flex; /*Coloca el contenido de izquierda a derecha*/
+}
+
+.flex{
+    justify-content: flex-end; /*Coloca el contenido de la clase padre .alinear-derecha hasta el final del form*/
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{/*Utilidades*/
+    display: block;/*Toma todo el espacio de pantalla*/
+    text-align: center;
+    color: var(--primario);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{ /*pseudoclase. Coloca un color amarrillo al colocar el cursor en alguna seccion de la barra de navegación*/
+    background-color: var(--amarillo);
+    color: var(--negro);
+}   
+
+/*Aduana*/
+.aduana{
+    background-image: url(../imagenes/logistica-integrada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    margin-bottom: 2rem;
+    
+}
+
+.aduana h2{
+    color: var(--primario);
+    font-weight: bold;
+    font-size: 3.8rem;
+}
+
+.aduana-container{
+    position: inherit;
+    background-color: rgb(0 0 0 / 50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Nosotros*/
+.nosotros{
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--primario) 100%);
+}
+
+.nosotros__texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nosotros p{
+    text-align: justify;
+    line-height: 1.5;
+    max-width: 120rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media (min-width: 768px) {
+    .centrar{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Mision*/
+.mision{
+    background-image: url(../imagenes/mision.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.mision h2{
+    color: var(--primario);
+    font-weight: bold;
+    font-size: 3.8rem;
+}
+
+.mision p{
+    color: var(--primario);
+    text-align: justify;
+    line-height: 1.5;
+    max-width: 120rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.mision-container{
+    position: inherit;
+    background-color: rgb(0 0 0 / 50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*Servicios*/
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio p{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.servicio .iconos{
+    height: 15rem; /*Altura de 15px*/
+    width: 15rem; /*Ancho de 15px*/
+    display: flex; /*Colocamos un elemento frente de otro*/
+    justify-content: space-evenly; /*Alineamos nuestro contenido con separaciones*/
+    align-items: center; /*Alineamos verticalmente los elementos*/
+}
+/*CONTACTO*/
+.formulario{
+    background-color: var(--rojo);
+    width: min(60rem, 100%); /*Utiliza el valor mas pequeño*/
+    margin: 0 auto; /*Centra horizontalmente y se utiliza si la clase padre no tiene un display flex declarado o no existe una clase padre*/
+    padding: 2rem; /*Expandimos 20px arriba*/
+    border-radius: 1rem; /*Redondeamos las esquinas con tamaño de 10px*/
+}
+
+.formulario fieldset{
+    border: none; /*Eliminamos el borde del fieldset*/
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .field-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+}
+
+.field:nth-child(3), .field:nth-child(4){ /*Pseudoclase que nos permite seleccionar al tercer y cuarto hijo de la clase .campo*/
+    grid-column: 1 / 3; /*Extienda el input del tercer y cuarto hijo hasta la tercera columna*/
+}
+
+.field{
+    margin-bottom: 1rem;
+}
+
+.field label{
+    color: var(--primario); /*Color de letra blanco*/
+    font-weight: bold; /*Ponemos en negritas el texto*/
+    margin-bottom: 0.5rem; /*Colocamos una separción con el elmento de abajo de 5px*/
+    display: block; /*Los labels ocupan todo el espacio disponible*/
+}
+
+.input-text{
+    width: 100%; /*Le indicamos que ocupe tode el espacio disponible*/
+    border: none; /*Le quitamos el borde que viene por defecto*/
+    padding: 1.5rem; /*Cada input tiene una altura o separacion de 15px*/
+    border-radius: 0.3rem; /*Redondeamos las esquinas con tamaÃ±o de 5px*/
+}
+
+.field textarea{
+    height: 15rem; /*Le damos una altura de 20px al textarea*/
+}
+/*Footer*/
+
+.footer{
+    background-color: var(--naranja);
+    padding: 5rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
